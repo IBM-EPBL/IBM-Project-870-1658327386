@@ -5,7 +5,7 @@
 
 - Jayaraj D | 2019504530
 - Saranraj AK | 2019504580
-- Shakeel Mohammed G | 2019504582
+- Shakeel Mohammed G | 2019504584
 - Thanish Malai P | 2019504598
 
 ## MOTIVATION 

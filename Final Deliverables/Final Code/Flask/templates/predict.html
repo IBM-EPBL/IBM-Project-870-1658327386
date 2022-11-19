@@ -1,0 +1,177 @@
+<html>
+<head>
+<style>
+body {
+    font-family: avenirnextltpro-regular;
+    color: #4a4a4a;
+    font-weight: 400;
+    background-image: linear-gradient(to right, #B2D2A4 0%, #B2D2A4  51%, #B2D2A4  100%);
+    margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+.topnav-right {
+  float: right;
+}
+img {
+  border-radius: 50%;
+}
+.margin-text{
+  margin: 70px;
+  text-align: justify;
+}
+
+* {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+
+        }
+
+     
+
+        form {
+            display: block;;
+            height: 85vh;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+            width: 60%;
+            text-align: center;
+			margin-left:300px;
+            
+        }
+
+
+        .details h2 {
+            
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+        }
+
+        label:hover {
+            transform: scale(1.03);
+        }
+
+        .details h2 {
+            /* margin-bottom: 300px; */
+            position: relative;
+            top: 100px;
+            margin: auto;
+            color: rgb(18, 231, 231);
+            font-size: 3rem;
+
+        }
+
+      
+
+
+        .details h1 {
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgb(8, 8, 8);
+        }
+
+
+        .upload {
+
+            font-size: 20px;
+            background-color: rgb(255, 252, 252);
+            border-radius: 20px;
+            outline: none;
+            width: 500px;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(45, 47, 49);
+
+
+
+        }
+
+        ::-webkit-file-upload-button {
+            color: rgb(255, 252, 252);
+            padding: 20px;
+            border: 2px solid rgb(201, 6, 6);
+            background-color: rgb(201, 6, 6);
+            border-radius: 15px;
+
+        }
+
+        ::-webkit-file-upload-button:hover {
+            border-radius: 20px;
+            border: 2px solid rgb(177, 174, 174);
+
+
+        }
+
+
+
+        input[type="submit"] {
+            margin-top: 80px;
+            margin-right: 30px;
+            padding: 15px 35px;
+            background-color: rgb(31, 185, 190);
+            border-radius: 15px;
+            color: black;
+            font-size: 1.5rem;
+            border: 4px solid rgb(31, 185, 190);
+            
+        }
+</style>
+</head>
+<body background="{{url_for('static',filename = 'images/Background.jpg')}}">
+<div class="topnav">
+  <a class="active" href=#>Plant disease prediction</a>
+   <div class="topnav-right">
+  <a class="active" href=/>Home</a>
+  <a href=prediction>Prediction</a>
+  </div>
+</div>
+<br><br><br>
+	  <h2 style="text-align:center;font-size:3rem">Predict Tomato Leaf Disease & Get Cure</h2>
+
+     
+            <form action="/predict" method="post"  enctype="multipart/form-data" onsubmit="showloading()" name='plant'>
+                <label for="cars">Choose plant type :</label>
+                  <select name="plant" id="plant">
+                    <option value="Fruit">Fruit</option>
+                    <option value="Vegetable">Vegetable</option>
+                    
+                  </select>
+                <br><br><br>
+                <input type="file" name="image" id='image' class="upload">
+				<br>
+                <input type="submit" value="Predict">
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
